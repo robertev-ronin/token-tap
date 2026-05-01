@@ -1,0 +1,41 @@
+{
+  "databasePath": "%USERPROFILE%\\.token-tap\\token-tap.db",
+  "defaultCurrency": "USD",
+  "defaultModel": "gpt-5.4",
+  "models": {
+    "gpt-5.5": {
+      "provider": "openai",
+      "inputPerMillion": 5.0,
+      "cachedInputPerMillion": 0.5,
+      "outputPerMillion": 30.0
+    },
+    "gpt-5.4": {
+      "provider": "openai",
+      "inputPerMillion": 2.0,
+      "cachedInputPerMillion": 0.5,
+      "outputPerMillion": 12.0
+    },
+    "copilot-estimated": {
+      "provider": "github",
+      "inputPerMillion": 2.0,
+      "cachedInputPerMillion": 0.0,
+      "outputPerMillion": 10.0
+    }
+  },
+  "watchFolders": [
+    "%APPDATA%\\Code\\logs",
+    "%APPDATA%\\Code - Insiders\\logs",
+    "%APPDATA%\\Code\\User\\globalStorage",
+    "%APPDATA%\\Code - Insiders\\User\\globalStorage"
+  ],
+  "privacy": {
+    "storeFullPrompts": false,
+    "storeFullResponses": false,
+    "storePromptHashes": true,
+    "storeResponseHashes": true,
+    "storeShortExcerpts": true,
+    "maxExcerptChars": 300,
+    "redactSecrets": true,
+    "storeRawLogLines": false
+  }
+}

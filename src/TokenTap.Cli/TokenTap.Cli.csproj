@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TokenTap.Core\TokenTap.Core.csproj" />
+    <ProjectReference Include="..\TokenTap.Parsers\TokenTap.Parsers.csproj" />
+    <ProjectReference Include="..\TokenTap.Storage\TokenTap.Storage.csproj" />
+    <ProjectReference Include="..\TokenTap.Export\TokenTap.Export.csproj" />
+    <ProjectReference Include="..\TokenTap.Alerts\TokenTap.Alerts.csproj" />
+    <ProjectReference Include="..\TokenTap.Counters\TokenTap.Counters.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
