@@ -20,6 +20,13 @@ Token-Tap 1.000 is the first public standalone release of the local AI coding-ag
 
 Use `token-tap-1.000-win-x64.zip` for Windows x64.
 
+When the NuGet package is published, the preferred install path is:
+
+```powershell
+dotnet tool install --global token-tap
+token-tap --help
+```
+
 ```powershell
 Expand-Archive .\token-tap-1.000-win-x64.zip -DestinationPath .\token-tap-1.000
 .\token-tap-1.000\token-tap.exe --help

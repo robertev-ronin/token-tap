@@ -16,3 +16,4 @@ First public standalone release.
 - Added xUnit tests.
 - Added Token-Tap logo and PerfMon screenshot to the GitHub documentation.
 - Added release packaging metadata so published Windows binaries use the `token-tap` executable name.
+- Added NuGet global tool package metadata for `dotnet tool install --global token-tap`.

@@ -62,6 +62,31 @@ Core parsing, importing, reporting, SQLite storage, CSV/XLSX export, and tests d
 
 ## Quick Start
 
+Install from NuGet.org:
+
+```powershell
+dotnet tool install --global token-tap
+token-tap --help
+token-tap init
+token-tap detect
+token-tap watch --once
+token-tap today
+```
+
+Update:
+
+```powershell
+dotnet tool update --global token-tap
+```
+
+Uninstall:
+
+```powershell
+dotnet tool uninstall --global token-tap
+```
+
+Build from source:
+
 ```powershell
 dotnet build TokenTap.sln
 dotnet test TokenTap.sln

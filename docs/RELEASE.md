@@ -8,8 +8,16 @@ Release assets:
 
 - `token-tap-1.000-win-x64.zip`
 - `token-tap-1.000-win-x64.zip.sha256`
+- NuGet global tool package ID: `token-tap`
 
 The Windows package is a framework-dependent .NET 8 `win-x64` publish. Install the .NET 8 runtime if it is not already present.
+
+Install the NuGet global tool:
+
+```powershell
+dotnet tool install --global token-tap
+token-tap --help
+```
 
 Quick install:
 
@@ -35,14 +43,26 @@ dotnet test TokenTap.sln
 dotnet publish src/TokenTap.Cli -c Release -r win-x64 --self-contained false -o artifacts/token-tap-win-x64
 ```
 
-4. Tag:
+4. Pack the NuGet global tool:
+
+```powershell
+dotnet pack src/TokenTap.Cli -c Release -o artifacts/package
+```
+
+5. Publish the NuGet package:
+
+```powershell
+dotnet nuget push artifacts/package/token-tap.1.0.0.nupkg --api-key <NUGET_API_KEY> --source https://api.nuget.org/v3/index.json
+```
+
+6. Tag:
 
 ```powershell
 git tag v1.000
 git push origin v1.000
 ```
 
-5. Create a GitHub release with:
+7. Create a GitHub release with:
 
 - release notes
 - build artifacts

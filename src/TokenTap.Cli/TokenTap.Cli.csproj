@@ -18,6 +18,25 @@
     <Version>1.0.0</Version>
     <FileVersion>1.0.0.0</FileVersion>
     <InformationalVersion>1.000</InformationalVersion>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>token-tap</ToolCommandName>
+    <PackageId>token-tap</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>Token-Tap</Title>
+    <Authors>Robert Evans</Authors>
+    <Description>A local spend meter for Codex, Copilot, and AI coding-agent token usage.</Description>
+    <PackageTags>dotnet-tool;cli;sqlite;perfmon;codex;copilot;ai;tokens</PackageTags>
+    <PackageProjectUrl>https://github.com/robertev-ronin/token-tap</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/robertev-ronin/token-tap</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>token-tap-logo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\docs\assets\token-tap-logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
