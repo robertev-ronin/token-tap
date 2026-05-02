@@ -10,10 +10,14 @@
   </ItemGroup>
 
   <PropertyGroup>
+    <AssemblyName>token-tap</AssemblyName>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.000</InformationalVersion>
   </PropertyGroup>
 
 </Project>

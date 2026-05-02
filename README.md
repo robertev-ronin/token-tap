@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/token-tap-logo.png" alt="Token-Tap logo" width="220" />
+</p>
+
 # Token-Tap
 
 Token-Tap is a local spend meter for AI coding tools.
@@ -6,9 +10,9 @@ It watches or imports Codex, GitHub Copilot, VS Code, OpenAI-style, Anthropic-st
 
 The privacy default is intentionally conservative: Token-Tap stores metrics, hashes, and short redacted excerpts, not full prompts or responses.
 
-## Status
+## Release 1.000
 
-This repository contains the first standalone .NET implementation:
+Release `1.000` is the first public standalone release:
 
 - `token-tap init`
 - `token-tap detect`
@@ -25,6 +29,28 @@ This repository contains the first standalone .NET implementation:
 - optional SMTP alert sender that reads the password from an environment variable
 - wrapper mode: `token-tap run --agent codex -- <command>`
 - xUnit test coverage for core, parser, storage, export, alert, counter, and CLI paths
+
+## Windows Performance Monitor
+
+Token-Tap can publish live values into Windows Performance Counters so PerfMon, PowerShell, and monitoring tools can watch AI spend and token burn without reading the SQLite history database.
+
+![Performance Monitor showing Token-Tap metrics](docs/assets/perfmon.png)
+
+Example counters:
+
+```powershell
+Get-Counter '\TokenTap\Estimated Daily Cost Cents'
+Get-Counter '\TokenTap\Total Tokens Today'
+Get-Counter '\TokenTap Agent(codex)\Estimated Daily Cost Cents'
+```
+
+Counter installation requires an elevated Windows shell:
+
+```powershell
+token-tap counters install
+token-tap counters test
+token-tap counters list
+```
 
 ## Requirements
 
@@ -154,6 +180,10 @@ See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) and [docs/ARCHITECTURE.md](docs/A
 Token-Tap is ready for public GitHub CI. The included workflow builds and tests on Windows and Ubuntu using .NET 8.
 
 See [docs/RELEASE.md](docs/RELEASE.md).
+
+## GitHub Images
+
+The checked-in logo is [docs/assets/token-tap-logo.png](docs/assets/token-tap-logo.png). A copy is also stored at [.github/social-preview.png](.github/social-preview.png) for use as the repository Social preview image in GitHub Settings.
 
 ## License
 

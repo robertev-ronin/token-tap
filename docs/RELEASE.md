@@ -1,5 +1,23 @@
 # Release Notes And Process
 
+## Release 1.000
+
+Release `1.000` is published from tag `v1.000`.
+
+Release assets:
+
+- `token-tap-1.000-win-x64.zip`
+- `token-tap-1.000-win-x64.zip.sha256`
+
+The Windows package is a framework-dependent .NET 8 `win-x64` publish. Install the .NET 8 runtime if it is not already present.
+
+Quick install:
+
+```powershell
+Expand-Archive .\token-tap-1.000-win-x64.zip -DestinationPath .\token-tap-1.000
+.\token-tap-1.000\token-tap.exe --help
+```
+
 ## Public Release Checklist
 
 1. Update `CHANGELOG.md`.
@@ -20,8 +38,8 @@ dotnet publish src/TokenTap.Cli -c Release -r win-x64 --self-contained false -o 
 4. Tag:
 
 ```powershell
-git tag v0.1.0
-git push origin v0.1.0
+git tag v1.000
+git push origin v1.000
 ```
 
 5. Create a GitHub release with:

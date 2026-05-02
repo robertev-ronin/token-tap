@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1.0
+## 1.000
 
-Initial standalone implementation.
+First public standalone release.
 
 - Added .NET 8 solution and separated projects.
 - Added core config, privacy, pricing, and usage models.
@@ -14,3 +14,5 @@ Initial standalone implementation.
 - Added alert evaluator and alert history.
 - Added documentation, CI, security, contribution, and release notes.
 - Added xUnit tests.
+- Added Token-Tap logo and PerfMon screenshot to the GitHub documentation.
+- Added release packaging metadata so published Windows binaries use the `token-tap` executable name.
